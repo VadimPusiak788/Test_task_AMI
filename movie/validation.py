@@ -12,6 +12,6 @@ def validate_number(number: int) -> int:
     return page_number
 
 
-def validate_len(src: str) -> str:
+def validate_len(src: str) -> None:
     if not (len(src) >= 2 and len(src) <= 20):
         raise LengthNotCorrect
