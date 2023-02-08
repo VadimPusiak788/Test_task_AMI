@@ -58,7 +58,7 @@ class MoviesView(View):
             except PageNotAnInteger:
                 return JsonResponse({"error": ["page__invalid"]})
 
-        paginator = Paginator(movies, 1)
+        paginator = Paginator(movies, 2)  # TODO: Can change number of movie on per page for suits you
         page_obj = paginator.get_page(page_number)
 
         if page_number and int(page_number) > page_obj.paginator.num_pages:
